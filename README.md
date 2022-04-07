@@ -18,9 +18,11 @@
 
 ##### Stage 2
 
-investigation </br>
+investigation
+</br>
 - [] Spring Boot sercurity
 implement
+</br>
 - [] Secure at APIs level
 
 ##### Stage 3

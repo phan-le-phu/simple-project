@@ -2,13 +2,13 @@
 
 ## To do
 
-##### Stage 1
+#### Stage 1
 
-####### investigation
+##### investigation
 - [x] Spring boot
 - [x] Spring JPA
 - [x] Maven
-####### implement
+##### implement
 - [x] Create APIs to insert or get data from your DB.
 - [x] Three layer (controller, service, repository/dao).
 - [x] Using LAZY strategy for object mapping.

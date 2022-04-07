@@ -16,37 +16,37 @@
 - [x] For controller, convert a specific model to a DTO object before return data to client.
 - [x] Declare an interface for each services class, using the interface in controller instead of a specific service class.
 
-##### Stage 2
+#### Stage 2
 
-####### investigation
+##### investigation
 - [] Spring Boot sercurity.
-####### implement
+##### implement
 - [] Secure at APIs level
 
-##### Stage 3
+#### Stage 3
 
-####### ivestigation
+##### ivestigation
 - [] elasticsearch
 - [] logstash
 - [] Kibana
 - [] Set up them
-####### implement
+##### implement
 - [] elaticsearch
 - [] logstash
 - [] Kibana
 
-##### Stage 4
+#### Stage 4
 
-####### investigation
+##### investigation
 - [] unit test
-####### implement
+##### implement
 - [] write unit test
 
-##### Stage 5
+#### Stage 5
 
-####### investigation
+##### investigation
 - [] Query Dsl
-####### implement
+##### implement
 - [] Apply QueryDsl to web app
 
 

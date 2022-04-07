@@ -4,11 +4,11 @@
 
 ##### Stage 1
 
-- investigation
+####### investigation
 - [x] Spring boot
 - [x] Spring JPA
 - [x] Maven
-- implement
+####### implement
 - [x] Create APIs to insert or get data from your DB.
 - [x] Three layer (controller, service, repository/dao).
 - [x] Using LAZY strategy for object mapping.
@@ -18,37 +18,35 @@
 
 ##### Stage 2
 
-investigation
-</br>
-- [] Spring Boot sercurity
-implement
-</br>
+####### investigation
+- [] Spring Boot sercurity.
+####### implement
 - [] Secure at APIs level
 
 ##### Stage 3
 
-- investigation
+####### ivestigation
 - [] elasticsearch
 - [] logstash
 - [] Kibana
 - [] Set up them
-- implement
+####### implement
 - [] elaticsearch
 - [] logstash
 - [] Kibana
 
 ##### Stage 4
 
-- investigation
+####### investigation
 - [] unit test
-- implement
+####### implement
 - [] write unit test
 
 ##### Stage 5
 
-- investigation
+####### investigation
 - [] Query Dsl
-- implement
+####### implement
 - [] Apply QueryDsl to web app
 
 

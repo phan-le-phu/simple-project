@@ -19,6 +19,7 @@ public class BookConverter {
     public BookDto toBookDto(Book book) {
         BookDto bookDto = modelMapper.map(book, BookDto.class);
         bookDto.setAuthorName(book.getAuthor().getName());
+        bookDto.setAuthorId(book.getAuthor().getId());
         return bookDto;
     }
 

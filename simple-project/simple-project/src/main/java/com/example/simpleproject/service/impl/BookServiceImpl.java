@@ -35,17 +35,16 @@ public class BookServiceImpl implements BookService {
         return bookDtos;
     }
 
-    public void insertBookForAuthor(Long authorId, List<BookDto> listBookDtos) {
-        Optional<Author> authorOptional = authorRepository.findById(authorId);
+    public void insertBookForAuthor(BookDto bookDto) {
+        Optional<Author> authorOptional = authorRepository.findById(bookDto.getAuthorId());
 
         if (!authorOptional.isPresent()) {
             throw new IllegalArgumentException("Author id does not exist");
         }
 
-        for (BookDto bookDto : listBookDtos) {
-            Book book = bookConverter.toBook(bookDto);
-            book.setAuthor(authorOptional.get());
-            bookRepository.save(book);
-        }
+        Book book = bookConverter.toBook(bookDto);
+        book.setAuthor(authorOptional.get());
+        bookRepository.save(book);
+
     }
 }

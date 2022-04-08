@@ -22,7 +22,10 @@ public class ModelMapperConfig {
         authorAuthorDtoTypeMap.addMappings(mapper -> mapper.skip(AuthorDto::setStrDob));
 
         TypeMap<Book, BookDto> bookBookDtoTypeMap = modelMapper.createTypeMap(Book.class, BookDto.class);
-        bookBookDtoTypeMap.addMappings(mapper -> mapper.skip(BookDto::setAuthorName));
+        bookBookDtoTypeMap.addMappings(mapper -> mapper.skip(BookDto::setAuthorId));
+
+        TypeMap<BookDto, Book> bookDtoBookTypeMap = modelMapper.createTypeMap(BookDto.class, Book.class);
+        bookDtoBookTypeMap.addMappings(mapper -> mapper.skip(Book::setId));
 
 
         return  modelMapper;

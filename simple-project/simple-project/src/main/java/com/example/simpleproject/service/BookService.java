@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface BookService {
     List<BookDto> getAllBook();
-    void insertBookForAuthor(Long idAuthor, List<BookDto> listBookDto);
+    void insertBookForAuthor(BookDto bookDto);
 }

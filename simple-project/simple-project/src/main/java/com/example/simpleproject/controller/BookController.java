@@ -3,8 +3,7 @@ package com.example.simpleproject.controller;
 import com.example.simpleproject.dto.BookDto;
 import com.example.simpleproject.service.BookService;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/book")
@@ -16,13 +15,14 @@ public class BookController {
     }
 
     @GetMapping
-    public List<BookDto> getBooks() {
-        List<BookDto> bookDtos = bookService.getAllBook();
-        return bookDtos;
+    public ModelAndView getBooks() {
+        ModelAndView modelAndView = new ModelAndView("/book/view");
+        modelAndView.addObject("books", bookService.getAllBook());
+        return modelAndView;
     }
 
-    @PostMapping("/{id}")
-    public void insertBookForAuthor(@PathVariable("id") Long authorId, @RequestBody List<BookDto> listBookDtos){
-        bookService.insertBookForAuthor(authorId, listBookDtos);
+    @PostMapping
+    public void insertBookForAuthor(@RequestBody BookDto bookDto){
+        bookService.insertBookForAuthor(bookDto);
     }
 }

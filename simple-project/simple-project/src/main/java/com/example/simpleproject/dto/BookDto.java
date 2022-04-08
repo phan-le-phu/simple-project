@@ -7,5 +7,6 @@ import lombok.Setter;
 @Getter
 public class BookDto {
     private String name;
+    private Long authorId;
     private String authorName;
 }

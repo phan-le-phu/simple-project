@@ -3,9 +3,9 @@ package com.example.simpleproject.controller;
 import com.example.simpleproject.dto.AuthorDto;
 import com.example.simpleproject.service.AuthorService;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.text.ParseException;
-import java.util.List;
 
 @RestController
 @RequestMapping("/author")
@@ -18,13 +18,15 @@ public class AuthorController {
     }
 
     @PostMapping
-    public void insertAuthor(@RequestBody AuthorDto author) throws ParseException {
-        authorService.insertAuthor(author);
+    public void insertAuthor(@RequestBody AuthorDto authorDto) throws ParseException {
+        authorService.insertAuthor(authorDto);
     }
 
     @GetMapping
-    public List<AuthorDto> getAuthors() {
-        List<AuthorDto> authorDtos = authorService.findAllAuthor();
-        return authorDtos;
+    public ModelAndView view(){
+        ModelAndView modelAndView = new ModelAndView("author/view");
+        modelAndView.addObject("authors", authorService.findAllAuthor());
+        return modelAndView;
     }
+
 }

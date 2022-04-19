@@ -19,21 +19,21 @@
 #### Stage 2
 
 ##### investigation
-- [] Spring Boot sercurity.
+- [x] Spring Boot sercurity.
 ##### implement
-- [] Secure at APIs level
+- [x] Secure at APIs level
 
 #### Stage 3
 
 ##### ivestigation
-- [] elasticsearch
-- [] logstash
-- [] Kibana
-- [] Set up them
+- [x] elasticsearch
+- [x] logstash
+- [x] Kibana
+- [x] Set up them
 ##### implement
-- [] elaticsearch
-- [] logstash
-- [] Kibana
+- [x] elaticsearch
+- [x] logstash
+- [x] Kibana
 
 #### Stage 4
 

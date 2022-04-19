@@ -1,6 +1,7 @@
 package com.example.simpleproject.security.config;
 
 import com.example.simpleproject.security.CustomAuthenticationFailureHandler;
+import com.example.simpleproject.security.CustomLoginSuccessHandler;
 import com.example.simpleproject.security.CustomLogoutSuccessHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,7 +45,7 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/perform_login").usernameParameter("username").passwordParameter("password")
-                .defaultSuccessUrl("/index", true)
+                .successHandler(loginSuccessHandler())
                 .failureUrl("/login?error=true")
                 .and()
                 .logout()
@@ -71,5 +72,8 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationFailureHandler authenticationFailureHandler() {
         return new CustomAuthenticationFailureHandler();
     }
+
+    @Bean
+    public CustomLoginSuccessHandler loginSuccessHandler() { return new CustomLoginSuccessHandler();}
 
 }

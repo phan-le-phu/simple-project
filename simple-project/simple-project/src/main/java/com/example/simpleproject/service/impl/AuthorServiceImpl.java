@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @Service
 public class AuthorServiceImpl implements AuthorService {
 
-    private final AuthorRepository authorRepository;
+    private AuthorRepository authorRepository;
     @Autowired
     private AuthorConverter authorConverter;
 

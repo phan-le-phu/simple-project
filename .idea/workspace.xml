@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae9cfe4d-2493-4733-bb46-c7c2bd9ef5a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-project/simple-project/app.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-project/simple-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-project/simple-project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/SimpleProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/SimpleProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/converter/AuthorConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/converter/AuthorConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-project/simple-project/src/main/java/com/example/simpleproject/service/impl/BookServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-project/simple-project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/simple-project/simple-project/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-project/simple-project/src/test/java/com/example/simpleproject/SimpleProjectApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,6 +42,8 @@
       <option name="presentableId" value="Default" />
       <updated>1649402019229</updated>
       <workItem from="1649402022472" duration="17000" />
+      <workItem from="1650509013509" duration="157000" />
+      <workItem from="1650513809403" duration="29000" />
     </task>
     <servers />
   </component>

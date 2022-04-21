@@ -7,6 +7,7 @@ import com.example.simpleproject.model.Book;
 import com.example.simpleproject.repository.AuthorRepository;
 import com.example.simpleproject.repository.BookRepository;
 import com.example.simpleproject.service.BookService;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +21,8 @@ public class BookServiceImpl implements BookService {
     private final AuthorRepository authorRepository;
     private final BookConverter bookConverter;
 
+
+
     public BookServiceImpl(BookRepository bookRepository,
                            AuthorRepository authorRepository,
                            BookConverter bookConverter) {
@@ -27,6 +30,8 @@ public class BookServiceImpl implements BookService {
         this.authorRepository = authorRepository;
         this.bookConverter = bookConverter;
     }
+
+
 
     public List<BookDto> getAllBook() {
         List<Book> books = bookRepository.findAll();

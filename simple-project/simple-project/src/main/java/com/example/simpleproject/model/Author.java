@@ -19,4 +19,9 @@ public class Author {
     private Long id;
     private String name;
     private Date dob;
+
+    public Author(String name, Date dob) {
+        this.name = name;
+        this.dob = dob;
+    }
 }

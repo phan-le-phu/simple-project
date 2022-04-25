@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
 import java.text.ParseException;
 

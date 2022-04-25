@@ -1,6 +1,7 @@
 package com.example.simpleproject.service;
 
 import com.example.simpleproject.converter.AuthorConverter;
+import com.example.simpleproject.dao.AuthorDao;
 import com.example.simpleproject.dto.AuthorDto;
 import com.example.simpleproject.model.Author;
 import com.example.simpleproject.repository.AuthorRepository;
@@ -24,7 +25,7 @@ public class AuthorServiceTests {
     AuthorService authorService;
 
     @MockBean
-    AuthorRepository authorRepository;
+    AuthorDao authorDao;
 
     @Autowired
     AuthorConverter authorConverter;
@@ -36,10 +37,10 @@ public class AuthorServiceTests {
         authorList.add(new Author(1L, "phu", new Date()));
         authorList.add(new Author(2L, "tuan", new Date()));
 
-        when(authorRepository.findAll()).thenReturn(authorList);
+        when(authorDao.findAll()).thenReturn(authorList);
 
         Assert.isTrue(authorService.findAllAuthor().size() == 2);
-        verify(authorRepository, times(1)).findAll();
+        verify(authorDao, times(1)).findAll();
     }
 
     @Test
@@ -48,10 +49,10 @@ public class AuthorServiceTests {
         AuthorDto authorDto = new AuthorDto(1L, "phu", "11/2/2000");
 
         Author author = authorConverter.toAuthor(authorDto);
-        when(authorRepository.save(author)).thenReturn(author);
+        when(authorDao.save(author)).thenReturn(author);
 
         authorService.insertAuthor(authorDto);
 
-        verify(authorRepository, times(1)).save(author);
+        verify(authorDao, times(1)).save(author);
     }
 }

@@ -1,7 +1,7 @@
 package com.example.simpleproject.controller;
 
+import com.example.simpleproject.dao.AuthorDao;
 import com.example.simpleproject.model.Author;
-import com.example.simpleproject.repository.AuthorRepository;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ public class WebControllerTests {
     private MockMvc  mockMvc;
 
     @Autowired
-    private AuthorRepository authorRepository;
+    private AuthorDao authorDao;
 
     @Test
     public void givenHomepageUri_whenGetHomepage_thenReturnHtmlDocument() throws Exception {
@@ -59,40 +59,11 @@ public class WebControllerTests {
     public void givenBookFormUri_whenGetBookForm_thenReturnFormDocument()
         throws Exception {
 
-        List<Author> authorList = new ArrayList<>();
-        authorList.add(new Author(1L, "phu", new Date()));
-        authorList.add(new Author(2L, "tuan", new Date()));
-        authorRepository.saveAll(authorList);
-
-        Matcher<List<Author>> authorMatcher = new Matcher<List<Author>>() {
-            @Override
-            public boolean matches(Object o) {
-                List<Object> objectList = (List<Object>) o;
-                return authorList.size() == objectList.size();
-            }
-
-            @Override
-            public void describeMismatch(Object o, Description description) {
-                List<Object> objectList = (List<Object>) o;
-                description.appendText("Authors list has length by " + objectList.size() + " was given");
-            }
-
-            @Override
-            public void _dont_implement_Matcher___instead_extend_BaseMatcher_() {
-
-            }
-
-            @Override
-            public void describeTo(Description description) {
-                description.appendText("The size of authors list is " + authorList.size());
-            }
-        };
-
 
         MvcResult mvcResult = mockMvc.perform(get("/admin/book/form"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("/book/form"))
-                .andExpect(model().attribute("authors", authorMatcher))
+                .andExpect(model().attributeExists("authors"))
                 .andDo(print())
                 .andReturn();
 

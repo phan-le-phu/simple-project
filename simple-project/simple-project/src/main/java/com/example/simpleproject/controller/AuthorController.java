@@ -8,6 +8,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import java.text.ParseException;
 
 @RestController
@@ -22,6 +24,7 @@ public class AuthorController {
         this.authorService = authorService;
     }
 
+    @RolesAllowed("ADMIN")
     @PostMapping
     public void insertAuthor(@RequestBody AuthorDto authorDto) throws ParseException {
         authorService.insertAuthor(authorDto);
@@ -31,7 +34,7 @@ public class AuthorController {
 
     @GetMapping
     public ModelAndView view(){
-        ModelAndView modelAndView = new ModelAndView("author/view");
+        ModelAndView modelAndView = new ModelAndView("/author/view");
         modelAndView.addObject("authors", authorService.findAllAuthor());
         return modelAndView;
     }

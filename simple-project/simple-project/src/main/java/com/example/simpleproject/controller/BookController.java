@@ -8,6 +8,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.security.RolesAllowed;
+
 @RestController
 @RequestMapping("/book")
 public class BookController {
@@ -27,6 +29,7 @@ public class BookController {
         return modelAndView;
     }
 
+    @RolesAllowed("ADMIN")
     @PostMapping
     public void insertBookForAuthor(@RequestBody BookDto bookDto){
         bookService.insertBookForAuthor(bookDto);

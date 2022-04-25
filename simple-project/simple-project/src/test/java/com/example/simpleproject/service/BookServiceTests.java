@@ -1,4 +1,4 @@
-package com.example.simpleproject.ServiceTests;
+package com.example.simpleproject.service;
 
 import com.example.simpleproject.converter.BookConverter;
 import com.example.simpleproject.dto.BookDto;
@@ -6,12 +6,7 @@ import com.example.simpleproject.model.Author;
 import com.example.simpleproject.model.Book;
 import com.example.simpleproject.repository.AuthorRepository;
 import com.example.simpleproject.repository.BookRepository;
-import com.example.simpleproject.service.BookService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.MockitoAnnotations;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.internal.util.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,10 +17,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
-@ExtendWith(MockitoExtension.class)
 public class BookServiceTests {
 
     @Autowired

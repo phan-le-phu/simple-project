@@ -2,6 +2,7 @@ package com.example.simpleproject.controller;
 
 import com.example.simpleproject.service.AuthorService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,7 +15,7 @@ public class WebController {
         this.authorService = authorService;
     }
 
-    @RequestMapping(value = "/index")
+    @GetMapping(value = "/index")
     public String index() {
        return "index";
     }
